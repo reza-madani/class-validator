@@ -27,7 +27,7 @@ export function Length(min: number, max?: number, validationOptions?: Validation
           const isMinLength = args?.constraints[0] !== null && args?.constraints[0] !== undefined;
           const isMaxLength = args?.constraints[1] !== null && args?.constraints[1] !== undefined;
           if (isMinLength && (!args.value || args.value.length < args?.constraints[0])) {
-            return eachPrefix + '$property must be longer than or equal to $constraint1 characters';
+            return eachPrefix + '$property باید حداقل $constraint1 کاراکتر باشد';
           } else if (isMaxLength && args.value.length > args?.constraints[1]) {
             return eachPrefix + '$property must be shorter than or equal to $constraint2 characters';
           }
